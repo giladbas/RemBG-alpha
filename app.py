@@ -4,6 +4,12 @@ import zipfile
 from PIL import Image
 import numpy as np
 
+st.set_page_config(
+    page_title="הסרת רקע מתמונות",
+    page_icon="🖼️",
+    layout="wide"
+)
+
 # ייבוא rembg עם טיפול בשגיאות
 try:
     from rembg import remove
@@ -102,12 +108,6 @@ def create_zip_file(images_data):
     return zip_buffer.getvalue()
 
 def main():
-    st.set_page_config(
-        page_title="הסרת רקע מתמונות",
-        page_icon="🖼️",
-        layout="wide"
-    )
-    
     st.title("🖼️ אפליקציה להסרת רקע מתמונות")
     st.markdown("העלה תמונה או מספר תמונות והסר את הרקע בקלות!")
     
